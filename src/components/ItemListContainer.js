@@ -5,6 +5,33 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import nike1 from "../assets/buzo.png"
+import { useState } from 'react';
+
+
+export const Contador = () =>{
+    const Stock = 10
+    const [contador, setContador] = useState(0);
+
+    const incrementar = () =>{
+        if (contador<Stock) {
+            setContador(contador + 1)
+        }
+    }
+
+    const decrementar = () =>{
+        if (contador>0) {
+            setContador(contador - 1)
+        }
+    }
+
+    return(
+        <div>
+            Items:  {contador}
+            <Button onClick={incrementar}>+ </Button>
+            <Button onClick={decrementar}>- </Button>
+        </div>
+    )
+}
 
 export default function ItemListContainer() {
   return (
@@ -30,10 +57,8 @@ export default function ItemListContainer() {
          size="small" color="primary"
         >
         {"$" + 500}
+        {Contador()}
         </Typography>
-        <Button size="small" color="primary">
-          Añadir carrito
-        </Button>
       </CardActions>
     </Card>
   );

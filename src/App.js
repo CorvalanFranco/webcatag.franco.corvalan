@@ -4,10 +4,17 @@ import React from 'react'
 import ItemListContainer from './components/ItemListContainer';
 
 function App() {
+
+  const agregar = ()=>{
+    console.log('vam')
+  }
+  
   return (
-    <div>
-    <NavBar />
-    <ItemListContainer/>
+    <div className='App'>
+      <header>
+        <NavBar />
+        <ItemListContainer agregarProducto={agregar}/>
+      </header>
     </div>
   );
 }
