@@ -5,15 +5,12 @@ import ItemListContainer from './components/ItemListContainer';
 
 function App() {
 
-  const agregar = ()=>{
-    console.log('vam')
-  }
   
   return (
     <div className='App'>
       <header>
         <NavBar />
-        <ItemListContainer agregarProducto={agregar}/>
+        <ItemListContainer />
       </header>
     </div>
   );

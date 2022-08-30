@@ -29,6 +29,7 @@ export const Contador = () =>{
             Items:  {contador}
             <Button onClick={incrementar}>+ </Button>
             <Button onClick={decrementar}>- </Button>
+            <Button> Agregar Al carrito </Button>
         </div>
     )
 }
